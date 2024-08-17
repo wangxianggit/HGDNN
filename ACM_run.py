@@ -193,7 +193,7 @@ if __name__ == '__main__':
             if test_nmi > max_test_nmi:
                 max_test_loss = test_loss.detach().cpu().numpy()
                 max_test_nmi = test_nmi
-            # 获取最大的test_ari
+            
             if test_ari > max_test_ari:
                 max_test_loss = val_loss.detach().cpu().numpy()
                 max_test_ari = test_ari
