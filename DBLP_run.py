@@ -208,15 +208,8 @@ if __name__ == '__main__':
                 max_test_loss = val_loss.detach().cpu().numpy()
                 max_test_ari = test_ari
 
-        print('---------------Best Results--------------------')
-        print('Train - Loss: {:.4f}, Macro_F1: {:.4f}, Micro_F1: {:.4f}'.format(best_test_loss, best_train_f1,
-                                                                                best_micro_train_f1))
-        print('Valid - Loss: {:.4f}, Macro_F1: {:.4f}, Micro_F1: {:.4f}'.format(best_val_loss, best_val_f1,
-                                                                                best_micro_val_f1))
-        print('Test - Loss: {:.4f}, Macro_F1: {:.4f}, Micro_F1: {:.4f}'.format(best_test_loss, best_test_f1,
-                                                                               best_micro_test_f1))
 
-        print('---------------MAX Results--------------------')
+        print('---------------Results--------------------')
         print('Valid - Loss: {:.4f}, maxMacro_F1: {:.4f}, maxMicro_F1: {:.4f}'.format(max_val_loss, max_val_macro_f1,
                                                                                       max_val_micro_f1))
         print('Test - Loss: {:.4f}, maxMacro_F1: {:.4f}, maxMicro_F1: {:.4f}'.format(max_test_loss, max_test_macro_f1,
