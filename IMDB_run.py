@@ -64,7 +64,7 @@ if __name__ == '__main__':
             A = torch.cat([A, torch.from_numpy(edge.todense()).type(torch.cuda.FloatTensor).unsqueeze(-1)], dim=-1)
 
     A = torch.cat([A, torch.eye(num_nodes).type(torch.cuda.FloatTensor).unsqueeze(-1)], dim=-1)
-
+ 
 
     node_features = torch.from_numpy(node_features).type(torch.cuda.FloatTensor)
     train_node = torch.from_numpy(np.array(labels[0])[:, 0]).type(torch.cuda.LongTensor)
@@ -211,3 +211,4 @@ if __name__ == '__main__':
     print("total run cluster results", final_NMI, final_ARI)
     print("average results", sum(l1) / len(l1), sum(l2) / len(l2))
     print("average results", sum(final_NMI) / len(final_NMI), sum(final_ARI) / len(final_ARI))
+
