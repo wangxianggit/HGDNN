@@ -73,7 +73,7 @@ if __name__ == '__main__':
     valid_target = torch.from_numpy(np.array(labels[1])[:, 1]).type(torch.cuda.LongTensor)
     test_node = torch.from_numpy(np.array(labels[2])[:, 0]).type(torch.cuda.LongTensor)  # test
     test_target = torch.from_numpy(np.array(labels[2])[:, 1]).type(torch.cuda.LongTensor)
-    print('node_features:', node_features.shape)
+    print('node_features:', node_features.shape) 
 
     num_classes = torch.max(train_target).item() + 1
     final_NMI, final_ARI = [], []
@@ -224,3 +224,4 @@ if __name__ == '__main__':
     print("total run cluster results", final_NMI, final_ARI)
     print("average results", sum(l1) / len(l1), sum(l2) / len(l2))
     print("average results", sum(final_NMI) / len(final_NMI), sum(final_ARI) / len(final_ARI))
+
