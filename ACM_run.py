@@ -1,4 +1,4 @@
-import torch
+import torch 
 import numpy as np
 import torch.nn as nn
 import torch.nn.functional as F
@@ -214,3 +214,4 @@ if __name__ == '__main__':
     print("total run cluster results", final_NMI, final_ARI)
     print("average results", sum(l1) / len(l1), sum(l2) / len(l2))
     print("average results", sum(final_NMI) / len(final_NMI), sum(final_ARI) / len(final_ARI))
+
