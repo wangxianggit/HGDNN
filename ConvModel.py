@@ -1,4 +1,4 @@
-import torch
+import torch 
 import numpy as np
 import torch.nn as nn
 import torch.nn.functional as F
@@ -154,3 +154,4 @@ class DeepGraphConv(torch.nn.Module):
         x = F.dropout(x, self.dropout, training=self.training)
         x = self.lins[1](x)
         return x
+
