@@ -1,6 +1,6 @@
 from __future__ import division
 
-import torch
+import torch 
 
 
 def accuracy(pred, target):
